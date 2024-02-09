@@ -87,7 +87,7 @@ const menuItems = [
 function App() {
   return (
     <div>
-        {/* Different components used for header and menuItems */}
+        {/* Different components used for header and menuItems. */}
         <Header />   
         <MenuItem menuItems={menuItems} />
     </div>
