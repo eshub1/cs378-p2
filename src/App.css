@@ -3,6 +3,59 @@
   Below, you can see an example of a class called "menu" that changes the color of the text to blue. Modify according to your needs.
 */
 
-.menu {
-  color: blue;
+body {
+  margin: 20px;
+  padding: 20px;
 }
+
+.menu {
+  padding: 5px;
+  padding-block: 5px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.tagline {
+  color: rgb(220, 69, 69);
+  font-style: italic;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding-top: 10%;
+}
+
+.normal-text {
+  color: rgb(134, 134, 134);
+  margin: 10px 0;
+  padding-bottom: 2cap;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-price {
+  font-weight: bold;
+  color: rgb(220, 69, 69);
+}
+
+.btn-add {
+  color: rgb(255, 255, 255);
+  background-color: rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.row{
+  padding: .5cap;
+}
+
+.image {
+  border-radius: 20px;
+}
+

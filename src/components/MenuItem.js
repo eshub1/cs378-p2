@@ -1,15 +1,37 @@
 import React from 'react';
-
-
-// This is a functional component that represents a single menu item. It currently takes in the title and displays it in an h2 element.
-// Modify the component to take in all the other properties of a menu item you need and display them in the component.
-// Use bootstrap to style the elements so that it looks like the mockup in the assignment.
-// Hint: You can use the image name to get the image from the images folder.
-const MenuItem = ({ title }) => {
+const MenuItem = ({ menuItems }) => {
     return (
-        <div>
-            <h2>{title}</h2>
-        </div>
+        <>
+        {menuItems.map((menuItem) => (
+            <div class="row" key={menuItem.id}>
+              <div class="col-5">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                  <img src={`/images/${menuItem.imageName}`} style={{ width: '90%', height: 'auto' }} class="image" alt={`Photo of ${menuItem.imageName}`} />
+                </div>
+              </div>
+  
+              <div class="col-7">
+                <div class="card-body d-flex flex-column align-items-left justify-content-left">
+                  <div>
+                    <h5 class="card-title">{menuItem.title}</h5>
+                    <p class="card-text">{menuItem.description}</p>
+  
+                    <div class="d-flex justify-content-between align-items-center">
+                      <p class="card-price">{menuItem.price}</p>
+  
+                      <div class="btn-add">
+                        <button type="button" className="btn">Add</button>
+                      </div>                    
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+            ))}
+
+        </>
     );
 };
 
