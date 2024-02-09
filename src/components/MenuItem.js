@@ -6,7 +6,7 @@ const MenuItem = ({ menuItems }) => {
             <div class="row" key={menuItem.id}>
               <div class="col-5">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                  <img src={`/images/${menuItem.imageName}`} style={{ width: '90%', height: 'auto' }} class="image" alt={`Photo of ${menuItem.imageName}`} />
+                  <img src={`images/${menuItem.imageName}`} style={{ width: '90%', height: 'auto' }} class="image" alt={`Photo of ${menuItem.imageName}`} />
                 </div>
               </div>
   
