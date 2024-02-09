@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div className="menu">
-            <img src="/images/logo.png" alt="Logo of Eshitha's Japanese Cafe" className="logo rounded" />
+            <img src="images/logo.png" alt="Logo of Eshitha's Japanese Cafe" className="logo rounded" />
             <div className="section text-center">
                 <p className="tagline">From-Scratch Recipes Handmade Everyday...</p>
             </div>
