@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import MenuItem from './components/MenuItem';
+import Feeder from './components/Feeder';
+import React, {useState} from 'react';
 
 
 
@@ -85,11 +87,41 @@ const menuItems = [
 
 
 function App() {
+
+  const initialCounts = menuItems.reduce((acc, menuItem) => {
+    acc[menuItem.id] = 0;
+    return acc;
+  }, {});
+
+  const initialSubtotal = 0;
+
+  const [counts, setCounts] = useState(initialCounts);
+  const [subtotal, setSubtotal] = useState(initialSubtotal);
+
+  const updateSubtotal = (newSubtotal) => {
+    setSubtotal(newSubtotal);
+  };
+
+ 
+  const resetAll = () => {
+    // Reset subtotal to 0
+    setSubtotal(0);
+    // Reset counts of all items to 0
+    const resetCounts = menuItems.reduce((acc, menuItem) => {
+      acc[menuItem.id] = 0;
+      return acc;
+    }, {});
+    setCounts(resetCounts);
+  };
+
+ 
+
   return (
     <div>
         {/* Different components used for header and menuItems. */}
         <Header />   
         <MenuItem menuItems={menuItems} />
+        {/* <Feeder menuItems={menuItems} subtotal={subtotal} clearAll={resetAll} /> */}
     </div>
     
   );
